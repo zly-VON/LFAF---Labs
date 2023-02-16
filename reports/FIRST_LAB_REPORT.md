@@ -179,7 +179,7 @@ bool FiniteAutomaton::wordIsValid(string s)
 
 * The 5 strings generated from the grammar:
 <p align="left">
-  <img src="..\images\image2.png">
+  <img src="..\images\image2.png" width="800">
 </p>
 
 * The conversion of the Regular Grammar to Finite Automaton:
@@ -192,7 +192,7 @@ bool FiniteAutomaton::wordIsValid(string s)
   <img src="..\images\image4.png" width="350">
 </p>
 <p align="left">
-  <img src="..\images\image5.png" width="350">
+  <img src="..\images\image5.png" width="400">
 </p>
 
 ## Conclusions 
