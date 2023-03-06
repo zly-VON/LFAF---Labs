@@ -1,17 +1,18 @@
 #ifndef GRAMMAR_H
 #define GRAMMAR_H
 
+
+#include "Automaton.h"
 #include <iostream>
-#include <string>
+#include <set>
 #include <vector>
 using namespace std;
 
 class Grammar
 {
     private:
-        vector<string> nonTerminalVariables;
-        vector<string> terminalVariables;
-
+        set<string> nonTerminalVariables;
+        set<string> terminalVariables;
         vector<string> leftP;
         vector<string> rightP;
 
@@ -22,10 +23,12 @@ class Grammar
         string tempString;
 
     public:
-        Grammar();
+        Grammar(string startChar);
+        void addProduction(string lhs, string rhs);
         void generateString();
-        vector<string> toFiniteAutomaton();
+        Automaton toFiniteAutomaton();
         void printGrammar();
+        void chomskyType();
 };
 
 #endif
