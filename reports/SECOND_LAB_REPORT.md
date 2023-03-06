@@ -185,7 +185,7 @@ This is a Regular Grammar
 ```
 
 * Conversion of Finite Automaton to Grammar
-    * "X" represents that here are no more transitions
+    * "X" represents that there are no more transitions
 
 ```
 
