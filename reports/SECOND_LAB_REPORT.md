@@ -185,7 +185,7 @@ This is a Regular Grammar
 ```
 
 * Conversion of Finite Automaton to Grammar
-    * "X" represents that there are no more transitions
+    * "X" represents that here are no more transitions
 
 ```
 
@@ -299,8 +299,8 @@ q0 [shape=circle];
 q0 [style="bold"];
 q1 [shape=circle];
 q1q3 [shape=circle];
-q2 [shape=circle];
-q2q1q3 [shape=circle];
+q2 [shape=doublecircle];
+q2q1q3 [shape=doublecircle];
 q3 [shape=circle];
 node [shape=circle];
 q0 -> q0 [label="b"];
@@ -316,7 +316,7 @@ q2q1q3 -> q1 [label="c"];
 }
 ```
 <p align="left">
-  <img src="..\images\dfa.png">
+  <img src="..\images\dfa_corrected.png">
 </p>
 
 
