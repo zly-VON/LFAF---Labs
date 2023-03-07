@@ -93,10 +93,16 @@ void Automaton::printGraph(string name)
     f << "digraph dfa {\nrankdir=LR;\n";
     for (auto i : states) 
     {
-        int count = 0;
-        for (auto j : finalStates) if (i == j) count++;
-        if (count == finalStates.size()) f << i << " [shape=doublecircle];\n";
-        else f << i << " [shape=circle];\n";
+        int flag = 0;
+        for (auto j : finalStates)
+        {
+            if (i == j) 
+            {
+                f << i << " [shape=doublecircle];\n";
+                flag = 1;
+            }
+        }
+        if (!flag) f << i << " [shape=circle];\n";
         if (i == initialState) f << i << " [style=\"bold\"];\n";
     }
     f << "node [shape=circle];\n";
