@@ -1,3 +1,4 @@
+#include "Lexer.h"
 #include "Grammar.h"
 #include "Automaton.h"
 #include <iostream>
@@ -38,6 +39,12 @@ int main(void)
     dfa.printFiniteAutomaton();
     dfa.isDeterministic();
     dfa.printGraph("dfa.dot");
+
+
+    string input = "int a = 5 + 2 * 3";
+    Lexer lexer(input);
+    std::vector<Token> tokens = lexer.tokenize();
+    lexer.printTokens(tokens);
 
     return 0;
 }
