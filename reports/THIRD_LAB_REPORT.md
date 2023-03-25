@@ -206,4 +206,5 @@ NUMBER: 7
 ## Conclusions
 
 &ensp;&ensp;&ensp; In this laboratory work I got a deeper understanding of what a Lexer is and how it can be implemented. The Lexer that I implemented was a very simple one that included the tokenization of basic arithmetic expressions. The trickest part was handling unkown characters, as they are not clearly identified. But I solved it by creating a new token type UNKNOWN. 
+
 &ensp;&ensp;&ensp; Finally, I managed to finish this laboratory work successfully and with satisfactory results.
