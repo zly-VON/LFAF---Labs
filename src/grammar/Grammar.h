@@ -6,6 +6,7 @@
 #include <iostream>
 #include <set>
 #include <vector>
+#include <cctype>
 using namespace std;
 
 class Grammar
@@ -29,6 +30,13 @@ class Grammar
         Automaton toFiniteAutomaton();
         void printGrammar();
         void chomskyType();
+        void printIntermediaryCNF();
+        void toChomskyNormalForm();
+        void eliminateNullProductions();
+        void eliminateUnitProductions();
+        void eliminateUselessSymbols();
+        void eliminateNonProductiveProductions();
+        void eliminateMixedProductions();
 };
 
 #endif
