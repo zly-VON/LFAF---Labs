@@ -18,8 +18,7 @@
 3. Implement a method for normalizing an input grammar by the rules of CNF.
     1. The implementation needs to be encapsulated in a method with an appropriate signature (also ideally in an appropriate class/type).
     2. The implemented functionality needs executed and tested.
-    3. A BONUS point will be given for the student who will have unit tests that validate the functionality of the project.
-    4. Also, another BONUS point would be given if the student will make the aforementioned function to accept any grammar, not only the one from the student's variant.
+
 
 ## Implementation description
 
