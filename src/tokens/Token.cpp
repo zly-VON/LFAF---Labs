@@ -1,10 +1,9 @@
 #include "Token.h"
 
-Token::Token(Type type, string value) : type(type), value(value) {}
-string Token::toString() 
-{
-    switch(type) 
-    {
+Token::Token(Type type, const string& value) : type(type), value(value) {}
+
+string Token::toString() const {
+    switch (type) {
         case IDENTIFIER:
             return "IDENTIFIER: " + value;
         case NUMBER:
@@ -17,11 +16,11 @@ string Token::toString()
             return "UNKNOWN: " + value;
     }
 }
-Token::Type Token::getType() 
-{ 
-    return type; 
+
+Token::Type Token::getType() const {
+    return type;
 }
-string Token::getValue() 
-{ 
-    return value; 
+
+const string& Token::getValue() const {
+    return value;
 }
