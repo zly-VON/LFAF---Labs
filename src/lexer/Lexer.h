@@ -1,30 +1,18 @@
 #ifndef LEXER_H
 #define LEXER_H
 
-
-#include "Token.h"
+#include <string>
 #include <vector>
-#include <iostream>
-using namespace std;
+#include "Token.h"
 
-class Lexer 
-{
-    public:
-        Lexer(string input);
-        // breaks the string into tokens
-        vector<Token> tokenize();
-        void printTokens(vector<Token> tokens);
-
-    private:
-        string input;
-        size_t pos;
-
-        string parseNumber();
-        string parseIdentifier();
-        string parseUnknown();
-        bool isOperator(char c);
-        bool isKeyword(string identifier);
+class Lexer {
+public:
+    Lexer(const string& input);
+    vector<Token> tokenize();
+    void printTokens(const vector<Token>& tokens);
+private:
+    string input;
+    Token::Type getTokenType(const string& tokenValue);
 };
 
-
-#endif
+#endif // LEXER_H
