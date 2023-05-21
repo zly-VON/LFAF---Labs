@@ -1,26 +1,20 @@
-#include "Lexer.h"
-#include "Grammar.h"
-#include "Automaton.h"
 #include <iostream>
-#include <time.h>
+#include "Lexer.h"
+#include "Parser.h"
 using namespace std;
 
-int main(void)
-{
-    Grammar g("S");
-    g.addProduction("S", "A");
-    g.addProduction("A", "aX");
-    g.addProduction("A", "bX");
-    g.addProduction("X", "e");
-    g.addProduction("X", "BX");
-    g.addProduction("X", "b");
-    g.addProduction("B", "AD");
-    g.addProduction("D", "aD");
-    g.addProduction("D", "a");
-    g.addProduction("C", "Ca");
-    g.printGrammar();
+int main(void) {
+    string input = "float s = 10 / 6 + a";
+    Lexer lexer(input);
+    vector<Token> tokens = lexer.tokenize();
+    lexer.printTokens(tokens);
 
-    g.toChomskyNormalForm();
+    Parser parser(tokens);
+    ASTNode* root = parser.parse();
+    if (root) {
+        cout << "AST: " << root->toString() << endl;
+        delete root;
+    }
 
     return 0;
 }
